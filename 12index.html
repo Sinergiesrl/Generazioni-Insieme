@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generazioni Insieme APS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-size: 10%;
+      color: #2e4600;
+    }
+
+    .barra-comandi, nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(245, 245, 220, 0.9);
+      z-index: 1000;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #2e4600;
+      text-decoration: none;
+      padding: 10px 15px;
+      transition: color 0.3s, background-color 0.3s;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      background-color: #2e4600;
+    }
+
+    #logo-container {
+      text-align: center;
+      margin-top: 70px;
+      padding: 20px;
+    }
+
+    
+
+    #logo-container h3 {
+      margin-top: 10px;
+    }
+#logo-container img {
+      width: 20vw;
+      max-width: 150px;
+      min-width: 80px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      #logo-container img {
+        width: 40vw;
+      }
+    }
+
+    .hidden-section {
+      display: none;
+      text-align: justify;
+      margin: 120px auto 20px auto;
+      padding: 20px;
+      background: rgba(245, 245, 220, 0.9);
+      color: #2e4600;
+      width: 90%;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    #chi-siamo p {
+      font-size: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      background: rgba(245, 245, 220, 0.9);
+      padding: 3px;
+      font-size: 0.7em;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      color: #2e4600;
+    }
+  </style>
+  <script>
+    function toggleSection(id) {
+      const sections = document.querySelectorAll('.hidden-section');
+      sections.forEach(section => section.style.display = 'none');
+      const selectedSection = document.getElementById(id);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+      }
+      const logoContainer = document.getElementById('logo-container');
+      if (id === 'home') {
+        logoContainer.style.display = 'block';
+      } else {
+        logoContainer.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="toggleSection('home'); return false;">Home</a></li>
+      <li><a href="#" onclick="toggleSection('chi-siamo'); return false;">Chi Siamo</a></li>
+      <li><a href="#" onclick="toggleSection('attivita'); return false;">Attività</a></li>
+      <li><a href="#" onclick="toggleSection('contatti'); return false;">Contatti</a></li>
+      <li><a href="#" onclick="toggleSection('mappa'); return false;">Mappa</a></li>
+    </ul>
+  </nav>
+
+  <div id="logo-container">
+    <img src="logo.png" alt="Logo Generazioni Insieme">
+    <h1>Benvenuti nella homepage</h1>
+    <h2>Associazione di Promozione Sociale</h2>
+    <h3>Costruiamo legami tra generazioni con passione e impegno sociale</h3>
+  </div>
+
+  <!-- Sezione Chi Siamo -->
+  <div id="chi-siamo" class="hidden-section">
+    <h2>Chi Siamo</h2>
+    <p>Benvenuti in Generazioni Insieme APS, un'Associazione di <strong>Promozione Sociale</strong> senza scopo di lucro, fondata il 8 maggio 2025 a Roma con l’obiettivo di stimolare un <strong>cambiamento positivo</strong> nella società. La nostra missione è quella di promuovere finalità <strong>civiche</strong>, <strong>solidaristiche</strong> e di <strong>utilità sociale</strong>, impegnandoci quotidianamente in attività <strong>culturali</strong>, artistiche, ricreative e di <strong>volontariato</strong>. Ci dedichiamo a favorire l'<strong>integrazione sociale</strong>, la diffusione della <strong>cultura</strong>, la promozione della <strong>legalità</strong>, della <strong>pace</strong> e della <strong>nonviolenza</strong>, cercando di stimolare un <strong>progresso collettivo</strong> che trascenda il presente e si proietti verso un futuro più <strong>giusto</strong> e <strong>inclusivo</strong>. Il nostro impegno si articola attraverso la creazione di opportunità di <strong>aggregazione</strong>, crescita civile e morale, offrendo <strong>servizi socio-sanitari</strong>, progettando soluzioni innovative nel campo del <strong>welfare</strong> di comunità e sviluppando iniziative <strong>editoriali</strong>. Generazioni Insieme APS si distingue per una struttura <strong>democratica</strong> e <strong>inclusiva</strong>, dove il <strong>volontariato</strong> e la partecipazione attiva dei nostri associati sono il cuore pulsante di ogni iniziativa. La nostra sede, situata a Roma in Viale Carlo Felice 101, è il punto di partenza per un’azione che si estende su scala nazionale e internazionale, attraverso collaborazioni con enti <strong>pubblici</strong> e <strong>privati</strong>, al fine di perseguire i nostri ambiziosi obiettivi. Siamo un punto di riferimento per chi desidera essere parte di un cambiamento concreto, capace di unire <strong>passato</strong> e <strong>futuro</strong> nella costruzione di un <strong>presente migliore</strong>. Se condividi i nostri valori, unisciti a noi e diventa protagonista di un progetto che guarda lontano, con <strong>passione</strong>, <strong>impegno</strong> e <strong>dedizione</strong>. Insieme, possiamo fare la <strong>differenza</strong>.</p>
+  </div>
+
+  <!-- Sezione Attività -->
+  <div id="attivita" class="hidden-section">
+    <h2>Le Nostre Attività</h2>
+    <p>Generazioni Insieme APS organizza una vasta gamma di attività volte a promuovere il benessere della comunità e a sostenere cause importanti. La nostra associazione è impegnata in diversi ambiti, tra cui:</p>
+    <ul>
+      <li><strong>Educazione e Formazione</strong>
+        <ul>
+          <li><strong>Corsi e Workshop:</strong> Offriamo una vasta gamma di corsi e workshop per favorire la crescita personale e professionale. I nostri programmi coprono argomenti come competenze digitali, gestione del tempo, leadership e sviluppo personale.</li>
+          <li><strong>Seminari e Conferenze:</strong> Organizziamo seminari e conferenze con esperti del settore per approfondire tematiche rilevanti e stimolare il dibattito.</li>
+        </ul>
+      </li>
+      <li><strong>Volontariato e Solidarietà</strong>
+        <ul>
+          <li><strong>Progetti di Volontariato:</strong> Promuoviamo il volontariato attraverso progetti che aiutano le persone in difficoltà. I nostri volontari sono attivi in iniziative locali e internazionali, collaborando con altre organizzazioni per fornire supporto a chi ne ha bisogno.</li>
+          <li><strong>Campagne di Raccolta Fondi:</strong> Organizziamo campagne di raccolta fondi per sostenere cause umanitarie e sociali, coinvolgendo la comunità in attività di solidarietà.</li>
+        </ul>
+      </li>
+      <li><strong>Eventi Culturali e Ricreativi</strong>
+        <ul>
+          <li><strong>Spettacoli e Manifestazioni:</strong> Organizziamo eventi culturali, spettacoli e manifestazioni per favorire l'inclusione e la socializzazione. Questi eventi sono pensati per tutte le età e offrono un'opportunità di svago e di arricchimento culturale.</li>
+          <li><strong>Attività Ricreative:</strong> Proponiamo attività ricreative come gite, laboratori artistici e sportivi per promuovere il benessere fisico e mentale.</li>
+        </ul>
+      </li>
+      <li><strong>Attività di Inclusione Sociale</strong>
+        <ul>
+          <li><strong>Supporto alle Persone Fragili:</strong> Offriamo servizi di assistenza per anziani, disabili e persone vulnerabili, garantendo loro il supporto necessario per una vita dignitosa.</li>
+          <li><strong>Integrazione delle Nuove Generazioni:</strong> Promuoviamo attività che favoriscono l'integrazione delle giovani generazioni, aiutandole a trovare il loro posto nella società e a sviluppare le loro capacità.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Sezione Contatti -->
+  <div id="contatti" class="hidden-section">
+    <h2>Contatti</h2>
+    <p>Indirizzo: Via Carlo Felice 101, 00185 Roma</p>
+    <p>Telefono: +39 06 77590895</p>
+    <p>Email: info@generazioniinsieme.it</p>
+    <p>Web: https://www.generazioninsieme.it</p>
+  </div>
+
+  <!-- Sezione Mappa -->
+  <div id="mappa" class="hidden-section">
+    <h2>Come Raggiungerci</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.5695795126654!2d12.5086!3d41.8919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61a763cd63e3%3A0x29b76087dff9390e!2sVia%20Carlo%20Felice%2C%20101%2C%2000185%20Roma%20RM%2C%20Italia!5e0!3m2!1sit!2sit!4v1708100000000" width="80%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Generazioni Insieme APS - Tutti i diritti riservati</p>
+  </footer>
+</body>
+</html>
