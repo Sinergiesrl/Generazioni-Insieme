@@ -76,12 +76,11 @@
     #logo-container {
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Centra verticalmente */
+      justify-content: flex-start; /* Allinea l'elemento in alto */
       align-items: center;
       text-align: center;
-      min-height: calc(100vh - 140px); /* Considera l'altezza della barra comandi (70px) e del footer (70px) */
-      margin-top: 70px;/* Considera la distanza dalla barra comandi */
-      padding: 20px;
+      min-height: calc(100vh - 140px); /* Altezza dinamica per adattarsi tra la barra comandi e il footer */
+      padding: 10px;  /* Riduce lo spazio tra la barra comandi e il logo */
     }
 
     #logo-container h3 {
