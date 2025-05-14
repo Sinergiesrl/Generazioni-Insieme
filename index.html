@@ -11,6 +11,9 @@
       background-size: 10%;
       color: #2e4600;
       padding-top: 70px; /* Altezza della barra di comando */
+   min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .barra-comandi, nav {
@@ -150,10 +153,12 @@ nav ul.active li {
       background: rgba(245, 245, 220, 0.9);
       padding: 3px;
       font-size: 0.7em;
-      position: sticky;
+      position: fixed;
       width: 100%;
       bottom: 0;
+      left: 0;
       color: #2e4600;
+      z-index: 1000;
           }
   </style>
   <script>
