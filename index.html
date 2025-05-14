@@ -74,8 +74,13 @@
     }
 
     #logo-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centra verticalmente */
+      align-items: center;
       text-align: center;
-      margin-top: 70px;
+      min-height: calc(100vh - 140px); /* Considera l'altezza della barra comandi (70px) e del footer (70px) */
+      margin-top: 70px;/* Considera la distanza dalla barra comandi */
       padding: 20px;
     }
 
