@@ -89,10 +89,15 @@
     }
 
     @media (max-width: 600px) {
+      .hidden-section {
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        }
+      }
       .hamburger {
         display: flex;
       }
-
       #logo-container img {
         width: 40vw;
       }
@@ -120,7 +125,10 @@ nav ul.active li {
     }
 
     .hidden-section {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: justify;
       margin: 120px auto 20px auto;
       padding: 20px;
@@ -129,6 +137,7 @@ nav ul.active li {
       width: 90%;
       max-width: 100%;
       border-radius: 8px;
+      min-height: 80vh; /* Altezza minima per centrare verticalmente */
     }
 
     #chi-siamo p {
